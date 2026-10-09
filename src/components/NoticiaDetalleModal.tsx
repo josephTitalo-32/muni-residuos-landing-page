@@ -67,13 +67,13 @@ export const NoticiaDetalleModal: React.FC<NoticiaDetalleModalProps> = ({
   const getCategoryBadgeClass = (category: MunicipalNewsItem['category']) => {
     switch (category) {
       case 'Intervención':
-        return 'bg-[#E6F2FA] text-[#0B335E] border-[#0081C0]/30';
+        return 'bg-[#E6F2FA] text-[#004173] border-[#2096d2]/30';
       case 'Campaña':
         return 'bg-[#F0FDF4] text-[#15803D] border-[#15803D]/30';
       case 'Logro':
-        return 'bg-[#E6F2FA] text-[#0B335E] border-[#0081C0]/30';
+        return 'bg-[#E6F2FA] text-[#004173] border-[#2096d2]/30';
       case 'Anuncio Oficial':
-        return 'bg-[#FEF7E6] text-[#78350F] border-[#E5A91E]/40';
+        return 'bg-[#FEF7E6] text-[#78350F] border-[#2096d2]/40';
       default:
         return 'bg-slate-100 text-slate-700 border-slate-200';
     }
@@ -95,14 +95,14 @@ export const NoticiaDetalleModal: React.FC<NoticiaDetalleModalProps> = ({
         {/* Barra superior de Navegación / Cerrar */}
         <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-5 sm:px-7 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2 text-xs text-slate-500 font-body">
-            <span className="w-2 h-2 rounded-full bg-[#0081C0]"></span>
-            <span className="font-semibold text-[#0B335E]">Noticia Institucional</span>
+            <span className="w-2 h-2 rounded-full bg-[#2096d2]"></span>
+            <span className="font-semibold text-[#004173]">Noticia Institucional</span>
           </div>
 
           <div className="flex items-center gap-2">
             <button
               onClick={handleShare}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200/90 text-xs font-bold text-[#0B335E] hover:text-[#0081C0] hover:border-[#0081C0]/40 shadow-2xs transition-all cursor-pointer font-heading"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200/90 text-xs font-bold text-[#004173] hover:text-[#2096d2] hover:border-[#2096d2]/40 shadow-2xs transition-all cursor-pointer font-heading"
             >
               {copied ? (
                 <>
@@ -111,7 +111,7 @@ export const NoticiaDetalleModal: React.FC<NoticiaDetalleModalProps> = ({
                 </>
               ) : (
                 <>
-                  <Share2 className="w-4 h-4 text-[#0081C0]" />
+                  <Share2 className="w-4 h-4 text-[#2096d2]" />
                   <span>Compartir</span>
                 </>
               )}
@@ -149,29 +149,29 @@ export const NoticiaDetalleModal: React.FC<NoticiaDetalleModalProps> = ({
           
           {/* Metadatos Fecha y Tiempo de Lectura */}
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-slate-500 font-body border-b border-slate-100 pb-4">
-            <div className="flex items-center gap-1.5 text-[#0B335E] font-semibold">
-              <Calendar className="w-4 h-4 text-[#0081C0]" />
+            <div className="flex items-center gap-1.5 text-[#004173] font-semibold">
+              <Calendar className="w-4 h-4 text-[#2096d2]" />
               <span>{newsItem.date}</span>
             </div>
             <span>•</span>
             <div className="flex items-center gap-1.5 text-slate-500">
-              <Clock className="w-4 h-4 text-[#0081C0]" />
+              <Clock className="w-4 h-4 text-[#2096d2]" />
               <span>{newsItem.readTime}</span>
             </div>
           </div>
 
           {/* TÍTULO COMPLETO GRANDE */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B335E] leading-tight tracking-tight font-heading">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#004173] leading-tight tracking-tight font-heading">
             {newsItem.title}
           </h1>
 
           {/* Área y Autoría Responsable */}
           <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-slate-50/80 border border-slate-200/80 text-xs sm:text-sm">
-            <div className="w-10 h-10 rounded-xl bg-[#E6F2FA] flex items-center justify-center text-[#0081C0] shrink-0 border border-[#0081C0]/30">
+            <div className="w-10 h-10 rounded-xl bg-[#E6F2FA] flex items-center justify-center text-[#2096d2] shrink-0 border border-[#2096d2]/30">
               <Building2 className="w-5 h-5" />
             </div>
             <div>
-              <div className="font-extrabold text-[#0B335E] font-heading">{newsItem.author}</div>
+              <div className="font-extrabold text-[#004173] font-heading">{newsItem.author}</div>
               <div className="text-[11px] text-slate-500 font-body">Publicación institucional oficial verificada</div>
             </div>
           </div>
@@ -187,14 +187,14 @@ export const NoticiaDetalleModal: React.FC<NoticiaDetalleModalProps> = ({
 
           {/* Etiquetas / Tags */}
           <div className="pt-6 border-t border-slate-100 flex flex-wrap items-center gap-2 font-body">
-            <span className="inline-flex items-center gap-1 text-xs font-bold text-[#0B335E] uppercase tracking-wider font-heading mr-2">
-              <Tag className="w-3.5 h-3.5 text-[#0081C0]" />
+            <span className="inline-flex items-center gap-1 text-xs font-bold text-[#004173] uppercase tracking-wider font-heading mr-2">
+              <Tag className="w-3.5 h-3.5 text-[#2096d2]" />
               Temas relacionados:
             </span>
             {newsItem.tags.map((tag, i) => (
               <span 
                 key={i} 
-                className="px-3.5 py-1 rounded-full bg-slate-100 text-xs font-semibold text-[#0B335E] border border-slate-200/60 hover:bg-[#E6F2FA] hover:text-[#0081C0] transition-colors"
+                className="px-3.5 py-1 rounded-full bg-slate-100 text-xs font-semibold text-[#004173] border border-slate-200/60 hover:bg-[#E6F2FA] hover:text-[#2096d2] transition-colors"
               >
                 #{tag}
               </span>
@@ -204,13 +204,13 @@ export const NoticiaDetalleModal: React.FC<NoticiaDetalleModalProps> = ({
         </div>
 
         {/* INFORMACIÓN INSTITUCIONAL VERIFICADA */}
-        <div className="mx-6 sm:mx-10 mb-8 p-5 rounded-2xl bg-[#E6F2FA]/60 border border-[#0081C0]/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-body">
+        <div className="mx-6 sm:mx-10 mb-8 p-5 rounded-2xl bg-[#E6F2FA]/60 border border-[#2096d2]/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-body">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0081C0] shrink-0 border border-[#0081C0]/30">
+            <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#2096d2] shrink-0 border border-[#2096d2]/30">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xs sm:text-sm font-bold text-[#0B335E]">
+              <p className="text-xs sm:text-sm font-bold text-[#004173]">
                 Contenido oficial verificado y administrado exclusivamente por la GGIRS • Municipalidad Provincial de Puno.
               </p>
               <p className="text-xs text-slate-500 font-body">
@@ -219,7 +219,7 @@ export const NoticiaDetalleModal: React.FC<NoticiaDetalleModalProps> = ({
             </div>
           </div>
           <div className="shrink-0 self-start sm:self-center">
-            <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#0B335E] text-white font-heading shadow-xs">
+            <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#004173] text-white font-heading shadow-xs">
               Resolución N° 082-2026-MPP
             </span>
           </div>
@@ -228,7 +228,7 @@ export const NoticiaDetalleModal: React.FC<NoticiaDetalleModalProps> = ({
         {/* Otras Noticias de Interés */}
         {otherNews.length > 0 && onNavigateToNews && (
           <div className="px-6 sm:px-10 pb-8 space-y-4 border-t border-slate-100 pt-6">
-            <h3 className="text-lg font-extrabold text-[#0B335E] font-heading tracking-tight">
+            <h3 className="text-lg font-extrabold text-[#004173] font-heading tracking-tight">
               Otras Actualizaciones Institucionales
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -236,12 +236,12 @@ export const NoticiaDetalleModal: React.FC<NoticiaDetalleModalProps> = ({
                 <button
                   key={item.id}
                   onClick={() => onNavigateToNews(item.id)}
-                  className="text-left bg-white rounded-2xl border border-slate-200/90 p-5 hover:border-[#0081C0]/50 hover:shadow-md transition-all cursor-pointer space-y-2 group shadow-2xs"
+                  className="text-left bg-white rounded-2xl border border-slate-200/90 p-5 hover:border-[#2096d2]/50 hover:shadow-md transition-all cursor-pointer space-y-2 group shadow-2xs"
                 >
-                  <div className="text-[11px] text-[#0081C0] font-bold font-heading">
+                  <div className="text-[11px] text-[#2096d2] font-bold font-heading">
                     {item.category} • {item.date}
                   </div>
-                  <h4 className="text-xs sm:text-sm font-extrabold text-[#0B335E] group-hover:text-[#0081C0] transition-colors line-clamp-2 font-heading">
+                  <h4 className="text-xs sm:text-sm font-extrabold text-[#004173] group-hover:text-[#2096d2] transition-colors line-clamp-2 font-heading">
                     {item.title}
                   </h4>
                 </button>

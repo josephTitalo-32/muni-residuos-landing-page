@@ -70,11 +70,11 @@ export const CompostModule: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3.5">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white text-[#15803D] border border-[#86EFAC] uppercase tracking-wider shadow-2xs">
-            <Sprout className="w-3.5 h-3.5 text-[#0081C0]" />
+            <Sprout className="w-3.5 h-3.5 text-[#2096d2]" />
             <span>Programa Municipal de Compostaje</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B335E] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#004173] tracking-tight">
             Transforma tus residuos orgánicos en Vida
           </h2>
           
@@ -103,7 +103,7 @@ export const CompostModule: React.FC = () => {
               <div className="bg-[#F8FAFC] p-4 rounded-xl border border-slate-200 shadow-2xs space-y-2">
                 <div className="flex justify-between items-center text-xs">
                   <span className="font-semibold text-slate-700">Personas en tu hogar:</span>
-                  <span className="text-sm font-bold text-[#0B335E] bg-white border border-slate-200 px-2.5 py-0.5 rounded-md">
+                  <span className="text-sm font-bold text-[#004173] bg-white border border-slate-200 px-2.5 py-0.5 rounded-md">
                     {householdMembers} {householdMembers === 1 ? 'persona' : 'personas'}
                   </span>
                 </div>
@@ -128,7 +128,7 @@ export const CompostModule: React.FC = () => {
                   <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 block">
                     Orgánicos Desviados
                   </span>
-                  <div className="text-2xl font-bold text-[#0B335E]">
+                  <div className="text-2xl font-bold text-[#004173]">
                     {organicKgPerMonth} <span className="text-xs font-medium text-slate-500">kg por mes</span>
                   </div>
                   <p className="text-[11px] text-slate-500">Materia orgánica que no irá a botaderos.</p>
@@ -163,7 +163,7 @@ export const CompostModule: React.FC = () => {
                   <Sprout className="w-4 h-4 text-[#22C55E]" />
                   <span>Beneficios del Programa</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#0B335E] mt-1">
+                <h3 className="text-xl font-bold text-[#004173] mt-1">
                   ¿Qué incluye el Programa de Compostaje?
                 </h3>
               </div>
@@ -193,7 +193,7 @@ export const CompostModule: React.FC = () => {
           <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between space-y-5">
             <div>
               <div className="border-b border-slate-100 pb-3 mb-4">
-                <h3 className="text-xl font-bold text-[#0B335E]">
+                <h3 className="text-xl font-bold text-[#004173]">
                   Formulario de Inscripción al Compostaje
                 </h3>
                 <p className="text-xs text-slate-500 mt-0.5 font-medium">
@@ -206,7 +206,7 @@ export const CompostModule: React.FC = () => {
                   <div className="w-14 h-14 rounded-full bg-emerald-100 text-[#15803D] flex items-center justify-center mx-auto shadow-xs">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h4 className="text-xl font-bold text-[#0B335E]">
+                  <h4 className="text-xl font-bold text-[#004173]">
                     ¡Inscripción Recibida!
                   </h4>
                   <p className="text-xs text-slate-600 leading-relaxed">
@@ -223,7 +223,7 @@ export const CompostModule: React.FC = () => {
                         committed: true
                       });
                     }}
-                    className="px-5 py-2 rounded-xl text-xs font-bold bg-[#0081C0] text-white hover:bg-[#006699] transition-colors cursor-pointer shadow-sm shadow-[#0081C0]/30"
+                    className="px-5 py-2 rounded-xl text-xs font-bold bg-[#2096d2] text-white hover:bg-[#1a7fb3] transition-colors cursor-pointer shadow-sm shadow-[#2096d2]/30"
                   >
                     Registrar otra vivienda
                   </button>

@@ -3,10 +3,10 @@ import { DEFAULT_ROUTE_COORDINATES } from './route-coordinates';
 
 export const PUNO_SECTORS = [
   { id: 'all', name: 'Todas las Rutas (29)', count: 29 },
-  { id: 'sector-1', code: 1, name: 'Sector 1: Centro Histórico', count: 8, color: '#0B335E' },
+  { id: 'sector-1', code: 1, name: 'Sector 1: Centro Histórico', count: 8, color: '#004173' },
   { id: 'sector-2', code: 2, name: 'Sector 2: Zona Norte y Bellavista', count: 7, color: '#1474B4' },
   { id: 'sector-3', code: 3, name: 'Sector 3: Zona Sur y Salcedo', count: 7, color: '#15803D' },
-  { id: 'sector-4', code: 4, name: 'Sector 4: Zona Alta y Chejoña', count: 7, color: '#E5A91E' },
+  { id: 'sector-4', code: 4, name: 'Sector 4: Zona Alta y Chejoña', count: 7, color: '#2096d2' },
 ];
 
 const RAW_PUNO_ROUTES: RouteDetail[] = [
@@ -22,7 +22,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'L - S',
     truckUnit: 'Compactador C-04 (Volvo 15m³)',
     estimatedHouseholds: 1420,
-    color: '#0B335E',
+    color: '#004173',
     status: 'Activo',
     description: 'Recorrido matutino por el eje cívico e histórico de Puno, priorizando comercios, templos coloniales y peatonales antes del inicio de actividades turísticas.',
     coverageStreets: [
@@ -50,7 +50,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Lunes, Miércoles y Viernes',
     truckUnit: 'Compactador C-02 (Mercedes-Benz 12m³)',
     estimatedHouseholds: 1180,
-    color: '#0B335E',
+    color: '#004173',
     status: 'Activo',
     description: 'Cobertura del cuadrante tradicional de Laykakota, Jr. Independencia y zonas aledañas al Arco Deustua con topografía de pendiente moderada.',
     coverageStreets: [
@@ -77,7 +77,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Diario (Lunes a Domingo)',
     truckUnit: 'Compactador C-07 (Volvo 15m³)',
     estimatedHouseholds: 1650,
-    color: '#0B335E',
+    color: '#004173',
     status: 'Activo',
     description: 'Eje ribereño y turístico con alta afluencia comercial, hoteles lacustres, embarcaderos y mercado Unión y Dignidad.',
     coverageStreets: [
@@ -104,7 +104,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Martes, Jueves y Sábado',
     truckUnit: 'Compactador C-01 (Isuzu 8m³ Ágil)',
     estimatedHouseholds: 920,
-    color: '#0B335E',
+    color: '#004173',
     status: 'Activo',
     description: 'Sector residencial y mirador patrimonial con calles angostas atendido por camión compactador de trocha angosta.',
     coverageStreets: [
@@ -130,7 +130,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Lunes a Sábado',
     truckUnit: 'Compactador C-05 (Volvo 15m³)',
     estimatedHouseholds: 1340,
-    color: '#0B335E',
+    color: '#004173',
     status: 'Activo',
     description: 'Sector costero del Titicaca, hotelería turística y restaurantes de pescados tradicionales.',
     coverageStreets: [
@@ -155,7 +155,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Diario (Lunes a Domingo)',
     truckUnit: 'Compactador C-09 (Volvo 18m³)',
     estimatedHouseholds: 1890,
-    color: '#0B335E',
+    color: '#004173',
     status: 'Activo',
     description: 'Ruta nocturna de alto volumen enfocada en los centros de abastos Bellavista y feria sabatina.',
     coverageStreets: [
@@ -180,7 +180,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Lunes, Miércoles y Viernes',
     truckUnit: 'Compactador C-03 (Mercedes-Benz 12m³)',
     estimatedHouseholds: 1050,
-    color: '#0B335E',
+    color: '#004173',
     status: 'Programado',
     description: 'Zona residencial densa con instituciones educativas y centros de salud barriales.',
     coverageStreets: [
@@ -205,7 +205,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Martes, Jueves y Sábado',
     truckUnit: 'Compactador C-06 (Volvo 12m³)',
     estimatedHouseholds: 1120,
-    color: '#0B335E',
+    color: '#004173',
     status: 'Activo',
     description: 'Cuadrante intermedio entre el centro y la zona norte, con presencia de academias y comercios medianos.',
     coverageStreets: [
@@ -558,7 +558,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Lunes a Sábado',
     truckUnit: 'Compactador C-05 (Volvo 15m³)',
     estimatedHouseholds: 1850,
-    color: '#E5A91E',
+    color: '#2096d2',
     status: 'Activo',
     description: 'Núcleo comercial de Chejoña y confluencia de transporte hacia la zona surandina.',
     coverageStreets: [
@@ -581,7 +581,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Lunes, Miércoles y Viernes',
     truckUnit: 'Compactador C-03 (Mercedes-Benz 12m³)',
     estimatedHouseholds: 1380,
-    color: '#E5A91E',
+    color: '#2096d2',
     status: 'Activo',
     description: 'Barrio tradicional en ladera con juntas vecinales organizadas en brigadas de limpieza comunitaria.',
     coverageStreets: [
@@ -604,7 +604,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Martes, Jueves y Sábado',
     truckUnit: 'Compactador C-01 (Isuzu 8m³ Ágil)',
     estimatedHouseholds: 1040,
-    color: '#E5A91E',
+    color: '#2096d2',
     status: 'Activo',
     description: 'Sector de topografía elevada con acceso por escalinatas y calles empedradas.',
     coverageStreets: [
@@ -627,7 +627,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Lunes, Miércoles y Viernes',
     truckUnit: 'Compactador C-02 (Mercedes-Benz 12m³)',
     estimatedHouseholds: 1120,
-    color: '#E5A91E',
+    color: '#2096d2',
     status: 'Activo',
     description: 'Barrio histórico de la minería colonial con calles serpenteantes y miradores hacia la bahía.',
     coverageStreets: [
@@ -650,7 +650,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Martes, Jueves y Sábado',
     truckUnit: 'Compactador C-10 (Volvo 15m³)',
     estimatedHouseholds: 960,
-    color: '#E5A91E',
+    color: '#2096d2',
     status: 'Activo',
     description: 'Cuadrante nor-oriental con zonas de conservación arqueológica y residencial campestre.',
     coverageStreets: [
@@ -672,7 +672,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Lunes y Jueves',
     truckUnit: 'Compactador C-12 (Volvo 15m³ Tracción 6x4)',
     estimatedHouseholds: 870,
-    color: '#E5A91E',
+    color: '#2096d2',
     status: 'Programado',
     description: 'Zona de santuario andino, carretera de salida interoceánica y comunidades dispersas.',
     coverageStreets: [
@@ -694,7 +694,7 @@ const RAW_PUNO_ROUTES: RouteDetail[] = [
     frequency: 'Martes, Jueves y Sábado',
     truckUnit: 'Compactador C-08 (Volvo 15m³)',
     estimatedHouseholds: 1250,
-    color: '#E5A91E',
+    color: '#2096d2',
     status: 'Activo',
     description: 'Barrio residencial con programas escolares de reciclaje y recuperación de laderas verdes.',
     coverageStreets: [

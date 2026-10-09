@@ -10,7 +10,7 @@ export const SUMAC_AYNI_CAMPAIGNS: CampaignEvent[] = [
     target: 'Meta: 15 Toneladas de reciclables',
     reward: 'Bolsa de Compost Orgánico Municipal + Plantón nativo',
     badge: 'Próxima Jornada',
-    badgeColor: 'bg-[#0081C0] text-white border border-[#006699]',
+    badgeColor: 'bg-[#2096d2] text-white border border-[#1a7fb3]',
     imageAlt: 'Gran Reciclatón Puneño en Parque Pino',
     ctaText: 'Unirme a la Campaña',
     description: 'Canjea botellas PET, papel y cartón por plantones nativos y abono orgánico.'
@@ -24,7 +24,7 @@ export const SUMAC_AYNI_CAMPAIGNS: CampaignEvent[] = [
     target: 'Erradicar 8 puntos críticos',
     reward: 'Certificado oficial de Voluntariado Ambiental Municipal',
     badge: 'Franja Costanera',
-    badgeColor: 'bg-[#0081C0] text-white border border-[#006699]',
+    badgeColor: 'bg-[#2096d2] text-white border border-[#1a7fb3]',
     imageAlt: 'Limpieza de ribera del Lago Titicaca',
     ctaText: 'Participar como Voluntario',
     description: 'Retira plásticos y residuos de la orilla del lago sagrado junto a brigadas vecinales.'
@@ -38,7 +38,7 @@ export const SUMAC_AYNI_CAMPAIGNS: CampaignEvent[] = [
     target: 'Dirigido a estudiantes y familias',
     reward: 'Composteras compactas y semillas',
     badge: 'Barrios de Puno',
-    badgeColor: 'bg-[#0081C0] text-white border border-[#006699]',
+    badgeColor: 'bg-[#2096d2] text-white border border-[#1a7fb3]',
     imageAlt: 'Ecotrueque y Talleres de Compostaje en Puno',
     ctaText: 'Inscribir a mi Barrio',
     description: 'Aprende a hacer compostaje en casa y participa en el intercambio de materiales reciclables.'

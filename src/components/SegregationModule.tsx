@@ -47,7 +47,7 @@ export const SegregationModule: React.FC = () => {
               <span>Segregación en la Fuente</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0B335E] tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#004173] tracking-tight leading-tight">
               Recojo a domicilio: Separa lo que sí sirve
             </h2>
 
@@ -56,7 +56,7 @@ export const SegregationModule: React.FC = () => {
             </p>
 
             <div className="pt-2">
-              <button className="mt-6 px-6 py-3 rounded-xl font-bold text-sm bg-[#0081C0] hover:bg-[#006699] text-white transition-all shadow-lg shadow-[#0081C0]/30 cursor-pointer inline-flex items-center gap-2">
+              <button className="mt-6 px-6 py-3 rounded-xl font-bold text-sm bg-[#2096d2] hover:bg-[#1a7fb3] text-white transition-all shadow-lg shadow-[#2096d2]/30 cursor-pointer inline-flex items-center gap-2">
                 <Download className="w-4 h-4" />
                 <span>Descargar Guía de Segregación</span>
               </button>

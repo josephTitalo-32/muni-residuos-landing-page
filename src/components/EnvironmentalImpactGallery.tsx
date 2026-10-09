@@ -89,7 +89,7 @@ export const EnvironmentalImpactGallery: React.FC = () => {
             <span className="w-6 h-0.5 bg-[#15803D] rounded-full"></span>
             <span>Impacto Real</span>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0B335E] tracking-tight font-heading">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#004173] tracking-tight font-heading">
             Galería de Impacto Ambiental
           </h3>
           <p className="text-xs sm:text-sm text-slate-500 font-body max-w-xl">
@@ -101,14 +101,14 @@ export const EnvironmentalImpactGallery: React.FC = () => {
       {/* 4 INDICADORES INSTITUCIONALES EN ESTILO BENTO */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 font-body">
         
-        <div className="group bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/90 shadow-xs text-center space-y-2.5 hover:shadow-[0_16px_40px_rgba(0,129,192,0.12)] hover:-translate-y-1.5 hover:border-[#0081C0]/40 transition-all duration-300">
-          <div className="w-12 h-12 rounded-2xl bg-[#E6F2FA] text-[#0081C0] mx-auto flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-[#0081C0] group-hover:text-white shadow-2xs">
+        <div className="group bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/90 shadow-xs text-center space-y-2.5 hover:shadow-[0_16px_40px_rgba(32,150,210,0.12)] hover:-translate-y-1.5 hover:border-[#2096d2]/40 transition-all duration-300">
+          <div className="w-12 h-12 rounded-2xl bg-[#E6F2FA] text-[#2096d2] mx-auto flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-[#2096d2] group-hover:text-white shadow-2xs">
             <Trash2 className="w-5 h-5 group-hover:text-white transition-colors duration-200" />
           </div>
-          <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0B335E] font-heading group-hover:text-[#0081C0] transition-colors duration-200 tracking-tight">
+          <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#004173] font-heading group-hover:text-[#2096d2] transition-colors duration-200 tracking-tight">
             15 Tn
           </div>
-          <div className="text-xs sm:text-sm font-bold text-[#0B335E] font-heading">
+          <div className="text-xs sm:text-sm font-bold text-[#004173] font-heading">
             Toneladas recuperadas
           </div>
           <p className="text-[11px] text-slate-500">
@@ -120,10 +120,10 @@ export const EnvironmentalImpactGallery: React.FC = () => {
           <div className="w-12 h-12 rounded-2xl bg-[#F0FDF4] text-[#15803D] mx-auto flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-[#15803D] group-hover:text-white shadow-2xs">
             <Trees className="w-5 h-5 group-hover:text-white transition-colors duration-200" />
           </div>
-          <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0B335E] font-heading group-hover:text-[#15803D] transition-colors duration-200 tracking-tight">
+          <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#004173] font-heading group-hover:text-[#15803D] transition-colors duration-200 tracking-tight">
             8
           </div>
-          <div className="text-xs sm:text-sm font-bold text-[#0B335E] font-heading">
+          <div className="text-xs sm:text-sm font-bold text-[#004173] font-heading">
             Puntos críticos erradicados
           </div>
           <p className="text-[11px] text-slate-500">
@@ -131,14 +131,14 @@ export const EnvironmentalImpactGallery: React.FC = () => {
           </p>
         </div>
 
-        <div className="group bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/90 shadow-xs text-center space-y-2.5 hover:shadow-[0_16px_40px_rgba(0,129,192,0.12)] hover:-translate-y-1.5 hover:border-[#0081C0]/40 transition-all duration-300">
-          <div className="w-12 h-12 rounded-2xl bg-[#E6F2FA] text-[#0081C0] mx-auto flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-[#0081C0] group-hover:text-white shadow-2xs">
+        <div className="group bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/90 shadow-xs text-center space-y-2.5 hover:shadow-[0_16px_40px_rgba(32,150,210,0.12)] hover:-translate-y-1.5 hover:border-[#2096d2]/40 transition-all duration-300">
+          <div className="w-12 h-12 rounded-2xl bg-[#E6F2FA] text-[#2096d2] mx-auto flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-[#2096d2] group-hover:text-white shadow-2xs">
             <Users className="w-5 h-5 group-hover:text-white transition-colors duration-200" />
           </div>
-          <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0B335E] font-heading group-hover:text-[#0081C0] transition-colors duration-200 tracking-tight">
+          <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#004173] font-heading group-hover:text-[#2096d2] transition-colors duration-200 tracking-tight">
             1,200
           </div>
-          <div className="text-xs sm:text-sm font-bold text-[#0B335E] font-heading">
+          <div className="text-xs sm:text-sm font-bold text-[#004173] font-heading">
             Voluntarios
           </div>
           <p className="text-[11px] text-slate-500">
@@ -146,14 +146,14 @@ export const EnvironmentalImpactGallery: React.FC = () => {
           </p>
         </div>
 
-        <div className="group bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/90 shadow-xs text-center space-y-2.5 hover:shadow-[0_16px_40px_rgba(229,169,30,0.15)] hover:-translate-y-1.5 hover:border-[#E5A91E]/40 transition-all duration-300">
-          <div className="w-12 h-12 rounded-2xl bg-[#FEF7E6] text-[#E5A91E] mx-auto flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-[#E5A91E] group-hover:text-white shadow-2xs">
+        <div className="group bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/90 shadow-xs text-center space-y-2.5 hover:shadow-[0_16px_40px_rgba(32,150,210,0.15)] hover:-translate-y-1.5 hover:border-[#2096d2]/40 transition-all duration-300">
+          <div className="w-12 h-12 rounded-2xl bg-[#FEF7E6] text-[#2096d2] mx-auto flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-[#2096d2] group-hover:text-white shadow-2xs">
             <Calendar className="w-5 h-5 group-hover:text-white transition-colors duration-200" />
           </div>
-          <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0B335E] font-heading group-hover:text-[#E5A91E] transition-colors duration-200 tracking-tight">
+          <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#004173] font-heading group-hover:text-[#2096d2] transition-colors duration-200 tracking-tight">
             3
           </div>
-          <div className="text-xs sm:text-sm font-bold text-[#0B335E] font-heading">
+          <div className="text-xs sm:text-sm font-bold text-[#004173] font-heading">
             Campañas realizadas
           </div>
           <p className="text-[11px] text-slate-500">
@@ -167,14 +167,14 @@ export const EnvironmentalImpactGallery: React.FC = () => {
       <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-xs space-y-6 font-body">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
           <div>
-            <h4 className="text-lg sm:text-xl font-extrabold text-[#0B335E] font-heading tracking-tight">
+            <h4 className="text-lg sm:text-xl font-extrabold text-[#004173] font-heading tracking-tight">
               Comparador Antes / Después
             </h4>
             <p className="text-xs sm:text-sm text-slate-500 font-body mt-0.5">
               Desplaza la barra central para comparar el estado previo con el espacio público rehabilitado.
             </p>
           </div>
-          <div className="flex items-center gap-2 self-start sm:self-auto text-xs text-[#0B335E] bg-[#E6F2FA] px-3.5 py-1.5 rounded-full border border-[#0081C0]/30 font-heading font-bold shadow-2xs">
+          <div className="flex items-center gap-2 self-start sm:self-auto text-xs text-[#004173] bg-[#E6F2FA] px-3.5 py-1.5 rounded-full border border-[#2096d2]/30 font-heading font-bold shadow-2xs">
             <span>Laykakota / Ribera Titicaca</span>
           </div>
         </div>
@@ -225,7 +225,7 @@ export const EnvironmentalImpactGallery: React.FC = () => {
           >
             <div className="w-1 h-full bg-white shadow-[0_0_12px_rgba(0,0,0,0.6)]"></div>
             
-            <div className="absolute w-11 h-11 rounded-full bg-white text-[#0081C0] shadow-2xl border-2 border-[#0081C0] flex items-center justify-center text-sm font-bold pointer-events-auto cursor-ew-resize hover:scale-110 active:scale-95 transition-transform">
+            <div className="absolute w-11 h-11 rounded-full bg-white text-[#2096d2] shadow-2xl border-2 border-[#2096d2] flex items-center justify-center text-sm font-bold pointer-events-auto cursor-ew-resize hover:scale-110 active:scale-95 transition-transform">
               <span>⇄</span>
             </div>
           </div>
@@ -251,7 +251,7 @@ export const EnvironmentalImpactGallery: React.FC = () => {
       <div className="space-y-6 font-body">
         <div className="flex items-center justify-between">
           <div>
-            <h4 className="text-lg sm:text-xl font-extrabold text-[#0B335E] font-heading tracking-tight">
+            <h4 className="text-lg sm:text-xl font-extrabold text-[#004173] font-heading tracking-tight">
               Videos Destacados
             </h4>
             <p className="text-xs sm:text-sm text-slate-500 font-body mt-0.5">
@@ -265,7 +265,7 @@ export const EnvironmentalImpactGallery: React.FC = () => {
             <div
               key={idx}
               onClick={() => setActiveVideo(vid)}
-              className="group bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-[0_16px_40px_rgba(0,129,192,0.12)] hover:-translate-y-1.5 hover:border-[#0081C0]/40 transition-all duration-300 cursor-pointer flex flex-col font-body"
+              className="group bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-[0_16px_40px_rgba(32,150,210,0.12)] hover:-translate-y-1.5 hover:border-[#2096d2]/40 transition-all duration-300 cursor-pointer flex flex-col font-body"
             >
               <div className="relative aspect-video w-full overflow-hidden bg-slate-900">
                 <img
@@ -276,7 +276,7 @@ export const EnvironmentalImpactGallery: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
                 
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#0081C0] to-[#0B335E] text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#2096d2] to-[#004173] text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-all duration-300">
                     <Play className="w-6 h-6 fill-current ml-0.5" />
                   </div>
                 </div>
@@ -285,21 +285,21 @@ export const EnvironmentalImpactGallery: React.FC = () => {
                   {vid.duration}
                 </div>
 
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-xs text-[#0B335E] text-[11px] font-bold uppercase tracking-wider font-heading shadow-xs">
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-xs text-[#004173] text-[11px] font-bold uppercase tracking-wider font-heading shadow-xs">
                   {vid.category}
                 </div>
               </div>
 
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-3.5">
                 <div className="space-y-1.5">
-                  <h4 className="text-base sm:text-lg font-extrabold text-[#0B335E] group-hover:text-[#0081C0] transition-colors font-heading tracking-tight">
+                  <h4 className="text-base sm:text-lg font-extrabold text-[#004173] group-hover:text-[#2096d2] transition-colors font-heading tracking-tight">
                     {vid.title}
                   </h4>
                   <p className="text-xs text-slate-600 leading-relaxed font-body">
                     {vid.description}
                   </p>
                 </div>
-                <div className="pt-3.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#0081C0] font-heading">
+                <div className="pt-3.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#2096d2] font-heading">
                   <span>Reproducir audiovisual</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
                 </div>
@@ -319,7 +319,7 @@ export const EnvironmentalImpactGallery: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
             className="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-slate-200 animate-in zoom-in-95 duration-200"
           >
-            <div className="p-5 sm:p-6 bg-gradient-to-r from-[#0B335E] to-[#0081C0] text-white flex items-center justify-between">
+            <div className="p-5 sm:p-6 bg-gradient-to-r from-[#004173] to-[#2096d2] text-white flex items-center justify-between">
               <div>
                 <span className="text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full bg-white/20 text-white font-heading border border-white/30">
                   {activeVideo.category}
@@ -344,7 +344,7 @@ export const EnvironmentalImpactGallery: React.FC = () => {
                 className="w-full h-full object-cover opacity-80"
               />
               <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-center text-white space-y-3">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#0081C0] to-[#0B335E] text-white flex items-center justify-center shadow-lg animate-pulse">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#2096d2] to-[#004173] text-white flex items-center justify-center shadow-lg animate-pulse">
                   <Play className="w-8 h-8 fill-current ml-1" />
                 </div>
                 <div className="space-y-1 max-w-md">
@@ -356,12 +356,12 @@ export const EnvironmentalImpactGallery: React.FC = () => {
 
             <div className="p-4 sm:p-5 bg-white border-t border-slate-100 flex items-center justify-between font-body">
               <div className="flex items-center gap-2 text-xs text-slate-500">
-                <Info className="w-4 h-4 text-[#0081C0]" />
+                <Info className="w-4 h-4 text-[#2096d2]" />
                 <span>Video oficial producido por la Municipalidad Provincial de Puno</span>
               </div>
               <button
                 onClick={() => setActiveVideo(null)}
-                className="px-6 py-2.5 rounded-full text-xs font-bold bg-[#0B335E] hover:bg-[#0081C0] text-white transition-colors cursor-pointer font-heading shadow-md"
+                className="px-6 py-2.5 rounded-full text-xs font-bold bg-[#004173] hover:bg-[#2096d2] text-white transition-colors cursor-pointer font-heading shadow-md"
               >
                 Cerrar Video
               </button>

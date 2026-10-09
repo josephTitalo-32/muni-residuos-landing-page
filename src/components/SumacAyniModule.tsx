@@ -21,8 +21,8 @@ export const SumacAyniModule: React.FC = () => {
       style={{ backgroundColor: '#93c47d' }}
     >
       {/* Decorative ambient gradients for depth */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#0081C0]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-96 h-96 bg-[#0081C0]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#2096d2]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-96 h-96 bg-[#2096d2]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-14 relative z-10">
         
@@ -60,7 +60,7 @@ export const SumacAyniModule: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-[#0B335E] group-hover:text-[#0081C0] transition-colors leading-snug">
+                <h3 className="text-xl font-bold text-[#004173] group-hover:text-[#2096d2] transition-colors leading-snug">
                   {event.title}
                 </h3>
 
@@ -72,17 +72,17 @@ export const SumacAyniModule: React.FC = () => {
                 {/* Logistics Details */}
                 <div className="space-y-2.5 pt-4 border-t border-slate-100 text-xs">
                   <div className="flex items-start gap-2.5 text-slate-700">
-                    <Calendar className="w-4 h-4 text-[#0081C0] shrink-0 mt-0.5" />
+                    <Calendar className="w-4 h-4 text-[#2096d2] shrink-0 mt-0.5" />
                     <span>{event.date}</span>
                   </div>
 
                   <div className="flex items-start gap-2.5 text-slate-700">
-                    <MapPin className="w-4 h-4 text-[#0081C0] shrink-0 mt-0.5" />
+                    <MapPin className="w-4 h-4 text-[#2096d2] shrink-0 mt-0.5" />
                     <span>{event.location}</span>
                   </div>
 
-                  <div className="flex items-start gap-2.5 text-[#0081C0] font-semibold">
-                    <Target className="w-4 h-4 text-[#0081C0] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-2.5 text-[#2096d2] font-semibold">
+                    <Target className="w-4 h-4 text-[#2096d2] shrink-0 mt-0.5" />
                     <span>{event.target}</span>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export const SumacAyniModule: React.FC = () => {
                 <button
                   onClick={() => setSelectedCampaign(event)}
                   id={`btn-unirme-${event.id}`}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold text-xs sm:text-sm bg-[#0081C0] hover:bg-[#006699] text-white transition-all shadow-sm shadow-[#0081C0]/30 cursor-pointer"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold text-xs sm:text-sm bg-[#2096d2] hover:bg-[#1a7fb3] text-white transition-all shadow-sm shadow-[#2096d2]/30 cursor-pointer"
                 >
                   <Users className="w-4 h-4 text-white" />
                   <span>{event.ctaText}</span>

@@ -36,11 +36,11 @@ export interface SectionTheme {
 export const SECTION_THEMES: Record<SectionThemeKey, SectionTheme> = {
   rutas: {
     name: 'Rutas de Recolección',
-    accent: '#0081C0',       // Celeste institucional MPP
-    accentDark: '#006699',
+    accent: '#2096d2',       // Celeste institucional MPP
+    accentDark: '#1a7fb3',
     accentSoft: '#E6F2FA',
     background: '#F0F7FC',   // Celeste muy claro
-    textPrimary: '#0B335E',
+    textPrimary: '#004173',
     textSecondary: '#64748B',
   },
   segregacion: {
@@ -49,24 +49,24 @@ export const SECTION_THEMES: Record<SectionThemeKey, SectionTheme> = {
     accentDark: '#126B33',
     accentSoft: '#F0FDF4',
     background: '#F0FDF4',   // Verde muy claro
-    textPrimary: '#0B335E',
+    textPrimary: '#004173',
     textSecondary: '#64748B',
   },
   reporta: {
     name: 'Fiscalización Ciudadana',
-    accent: '#E5A91E',       // Dorado institucional
+    accent: '#2096d2',       // Dorado institucional
     accentDark: '#C28E15',
     accentSoft: '#FEF7E6',
     background: '#FFFBEB',   // Ámbar muy claro
-    textPrimary: '#0B335E',
+    textPrimary: '#004173',
     textSecondary: '#64748B',
   },
   'sumac-ayni': {
     name: 'Campañas Ambientales',
-    accent: '#E5A91E',       // Dorado (sobre fondo oscuro)
+    accent: '#2096d2',       // Dorado (sobre fondo oscuro)
     accentDark: '#C28E15',
-    accentSoft: 'rgba(229, 169, 30, 0.15)',
-    background: '#0B335E',   // Gradiente oscuro se aplica en el componente
+    accentSoft: 'rgba(32, 150, 210, 0.15)',
+    background: '#004173',   // Gradiente oscuro se aplica en el componente
     textPrimary: '#FFFFFF',
     textSecondary: '#CBD5E1',
   },
@@ -76,7 +76,7 @@ export const SECTION_THEMES: Record<SectionThemeKey, SectionTheme> = {
     accentDark: '#0A7668',
     accentSoft: '#F0FDFA',
     background: '#F0FDFA',   // Teal muy claro
-    textPrimary: '#0B335E',
+    textPrimary: '#004173',
     textSecondary: '#64748B',
   },
 };

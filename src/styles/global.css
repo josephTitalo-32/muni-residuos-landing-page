@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-    --color-puno-blue: #0081C0;
-    --color-puno-navy: #0B335E;
-    --color-puno-sky: #0081C0;
-    --color-puno-sky-light: #3399D1;
-    --color-puno-sky-dark: #006699;
-    --color-puno-gold: #E5A91E;
+    --color-puno-blue: #2096d2;
+    --color-puno-navy: #004173;
+    --color-puno-sky: #2096d2;
+    --color-puno-sky-light: #4BAEE0;
+    --color-puno-sky-dark: #1a7fb3;
+    --color-puno-gold: #2096d2;
     --color-puno-green: #15803D;
-    --color-puno-accent: #0081C0;
+    --color-puno-accent: #2096d2;
 }
 
 @layer base {
@@ -17,18 +17,18 @@
     --font-body: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-sans: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-    --color-accent-sky: #0081C0;
-    --color-sky-primary: #0081C0;
-    --color-sky-dark: #006699;
-    --color-sky-light: #3399D1;
-    --color-navy: #0B335E;
+    --color-accent-sky: #2096d2;
+    --color-sky-primary: #2096d2;
+    --color-sky-dark: #1a7fb3;
+    --color-sky-light: #4BAEE0;
+    --color-navy: #004173;
 
     /* Section Theme Fallbacks */
-    --section-accent: #0081C0;
-    --section-accent-dark: #006699;
+    --section-accent: #2096d2;
+    --section-accent-dark: #1a7fb3;
     --section-accent-soft: #E6F2FA;
     --section-bg: #FFFFFF;
-    --section-text-primary: #0B335E;
+    --section-text-primary: #004173;
     --section-text-secondary: #64748B;
     }
 
@@ -48,17 +48,17 @@
 
 /* Custom Leaflet Tooltips and Marker Styles */
 .leaflet-tooltip.puno-street-tooltip {
-    background-color: #006699 !important;
+    background-color: #1a7fb3 !important;
     color: #FFFFFF !important;
-    border: 1px solid #0081C0 !important;
+    border: 1px solid #2096d2 !important;
     border-radius: 8px !important;
     font-size: 11px !important;
     font-weight: 600 !important;
     padding: 4px 8px !important;
-    box-shadow: 0 4px 12px rgba(0, 129, 192, 0.25) !important;
+    box-shadow: 0 4px 12px rgba(32, 150, 210, 0.25) !important;
 }
 .leaflet-tooltip.puno-street-tooltip::before {
-    border-top-color: #006699 !important;
+    border-top-color: #1a7fb3 !important;
 }
 
 .leaflet-tooltip.puno-truck-tooltip {
@@ -247,4 +247,19 @@ html::-webkit-scrollbar {
   .custom-scrollbar-track {
     display: none;
   }
+}
+
+/* ============================================ */
+/* UTILIDAD: OCULTAR SCROLLBAR EN CONTENEDORES  */
+/* ============================================ */
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
 }

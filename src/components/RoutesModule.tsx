@@ -28,10 +28,10 @@ export const RoutesModule: React.FC = () => {
 
   // Mapeo de colores por sector (sectorCode)
   const SECTOR_COLORS: Record<number, { bg: string; text: string; border: string }> = {
-    1: { bg: 'bg-[#0B335E]/40', text: 'text-blue-100', border: 'border-[#0B335E]/70' },       // Centro: navy
+    1: { bg: 'bg-[#004173]/40', text: 'text-blue-100', border: 'border-[#004173]/70' },       // Centro: navy
     2: { bg: 'bg-[#1474B4]/40', text: 'text-sky-100', border: 'border-[#1474B4]/70' },       // Norte: celeste
     3: { bg: 'bg-[#15803D]/40', text: 'text-emerald-100', border: 'border-[#15803D]/70' },   // Sur: verde
-    4: { bg: 'bg-[#E5A91E]/40', text: 'text-amber-100', border: 'border-[#E5A91E]/70' },     // Alta: dorado
+    4: { bg: 'bg-[#2096d2]/40', text: 'text-amber-100', border: 'border-[#2096d2]/70' },     // Alta: dorado
   };
 
   // Mapeo de colores por turno
@@ -135,7 +135,7 @@ export const RoutesModule: React.FC = () => {
           <div
             className="w-1 sm:w-1.5 rounded-full shrink-0"
             style={{
-              background: 'linear-gradient(to bottom, #0081C0 0%, #0081C0 50%, transparent 100%)',
+              background: 'linear-gradient(to bottom, #2096d2 0%, #2096d2 50%, transparent 100%)',
             }}
           ></div>
 
@@ -152,7 +152,7 @@ export const RoutesModule: React.FC = () => {
               <Truck className="w-3.5 h-3.5" style={{ color: 'var(--section-accent)' }} />
               <span>Sistema Integral de Limpieza Pública</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-[#0B335E] via-[#0B335E] to-[#0081C0] bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-[#004173] via-[#004173] to-[#2096d2] bg-clip-text text-transparent">
               29 Rutas de Recolección en Puno
             </h2>
             <p className="text-sm sm:text-base text-slate-600 font-normal max-w-3xl leading-relaxed">
@@ -243,7 +243,7 @@ export const RoutesModule: React.FC = () => {
                   Cerrar
                 </button>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 max-h-64 overflow-y-auto pr-1">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 max-h-64 overflow-y-auto pr-1 hide-scrollbar">
                 {PUNO_ROUTES.map((r) => {
                   const isSelected = selectedRouteId === r.id;
                   return (
@@ -256,7 +256,7 @@ export const RoutesModule: React.FC = () => {
                       className={`text-left p-2.5 rounded-xl text-xs transition-all cursor-pointer border ${
                         isSelected
                           ? 'text-white shadow-2xs font-bold'
-                          : 'bg-slate-50 hover:bg-slate-100 text-[#0B335E] border-slate-100'
+                          : 'bg-slate-50 hover:bg-slate-100 text-[#004173] border-slate-100'
                       }`}
                       style={
                         isSelected
@@ -313,7 +313,7 @@ export const RoutesModule: React.FC = () => {
 
                   {/* Nombre de la ruta + GPS */}
                   <div className="hidden sm:flex flex-col leading-tight">
-                    <span className="text-xs font-bold text-[#0B335E] whitespace-nowrap">
+                    <span className="text-xs font-bold text-[#004173] whitespace-nowrap">
                       {activeRoute.name.split(':')[0]}
                     </span>
                     <div className="flex items-center gap-1">
@@ -356,7 +356,7 @@ export const RoutesModule: React.FC = () => {
                       handleStreetSelect(searchResults[0]);
                     }
                   }}
-                  className="w-9 h-9 rounded-full bg-[#0081C0] hover:bg-[#006699] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#0081C0]/30 transition-all cursor-pointer ml-1"
+                  className="w-9 h-9 rounded-full bg-[#2096d2] hover:bg-[#1a7fb3] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#2096d2]/30 transition-all cursor-pointer ml-1"
                   aria-label="Buscar ruta"
                 >
                   <Navigation className="w-4 h-4 text-white" />
@@ -383,8 +383,8 @@ export const RoutesModule: React.FC = () => {
                         >
                           <div className="flex items-center justify-between gap-2">
                             <div className="flex items-center gap-2 truncate">
-                              <MapPin className="w-4 h-4 text-[#0081C0] shrink-0" />
-                              <span className="font-bold text-xs text-[#0B335E] truncate group-hover:text-[#0081C0]">
+                              <MapPin className="w-4 h-4 text-[#2096d2] shrink-0" />
+                              <span className="font-bold text-xs text-[#004173] truncate group-hover:text-[#2096d2]">
                                 {r.name}
                               </span>
                             </div>
@@ -417,7 +417,7 @@ export const RoutesModule: React.FC = () => {
           <div className="lg:col-span-5 flex flex-col">
             <div
               className="w-full h-full rounded-2xl shadow-xl overflow-hidden relative flex flex-col"
-              style={{ background: 'linear-gradient(135deg, #0B335E 0%, #006699 50%, #0081C0 100%)' }}
+              style={{ background: 'linear-gradient(135deg, #004173 0%, #1a7fb3 50%, #2096d2 100%)' }}
             >
               {/* Patrón decorativo sutil */}
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#FFFFFF_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
@@ -471,7 +471,7 @@ export const RoutesModule: React.FC = () => {
                             onError={() => setStartImgError(true)}
                           />
                         ) : (
-                          <Truck className="w-7 h-7 text-[#0B335E]" strokeWidth={1.5} />
+                          <Truck className="w-7 h-7 text-[#004173]" strokeWidth={1.5} />
                         )}
                       </div>
                       {/* Punto verde (estado activo/inicio) */}
@@ -512,7 +512,7 @@ export const RoutesModule: React.FC = () => {
                             onError={() => setEndImgError(true)}
                           />
                         ) : (
-                          <Truck className="w-7 h-7 text-[#0B335E]" strokeWidth={1.5} />
+                          <Truck className="w-7 h-7 text-[#004173]" strokeWidth={1.5} />
                         )}
                       </div>
                       {/* Punto rojo (estado final) */}
@@ -595,7 +595,7 @@ export const RoutesModule: React.FC = () => {
                       </span>
                       <div
                         className={`space-y-1 pr-1 transition-all duration-300 ${
-                          isCardExpanded ? 'max-h-40 overflow-y-auto' : ''
+                          isCardExpanded ? 'max-h-40 overflow-y-auto hide-scrollbar' : ''
                         }`}
                       >
                         {(isCardExpanded
@@ -603,7 +603,7 @@ export const RoutesModule: React.FC = () => {
                           : activeRoute.coverageStreets.slice(0, 3)
                         ).map((street, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-[11px] text-white/85 py-0.5">
-                            <span className="w-1 h-1 rounded-full bg-[#E5A91E] shrink-0"></span>
+                            <span className="w-1 h-1 rounded-full bg-[#2096d2] shrink-0"></span>
                             <span className="truncate">{street}</span>
                           </div>
                         ))}
@@ -623,7 +623,7 @@ export const RoutesModule: React.FC = () => {
                   {/* Botón principal: Ver más / Ver menos */}
                   <button
                     onClick={() => setIsCardExpanded((prev) => !prev)}
-                    className="w-full py-3 px-4 rounded-lg font-bold text-xs sm:text-sm bg-[#0B335E] hover:bg-[#071F38] text-white transition-all shadow-md cursor-pointer flex items-center justify-center gap-2"
+                    className="w-full py-3 px-4 rounded-lg font-bold text-xs sm:text-sm bg-[#004173] hover:bg-[#003459] text-white transition-all shadow-md cursor-pointer flex items-center justify-center gap-2"
                   >
                     <span>{isCardExpanded ? 'Ver menos' : 'Ver más'}</span>
                     <ChevronDown

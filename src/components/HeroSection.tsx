@@ -45,7 +45,7 @@ const HERO_SLIDES: SlideItem[] = [
     id: 'slide-rutas',
     badge: 'Registro en vivo',
     badgeIcon: Navigation,
-    badgeColor: 'bg-[#0081C0]/30 text-sky-100 border-sky-300/30',
+    badgeColor: 'bg-[#2096d2]/30 text-sky-100 border-sky-300/30',
     title: 'Monitoreo en Vivo de',
     highlightText: 'las 29 Rutas',
     subtitle: 'Sigue el recorrido de los camiones compactadores en tiempo real desde tu celular y recibe avisos de campana en tu cuadra.',
@@ -53,7 +53,7 @@ const HERO_SLIDES: SlideItem[] = [
     targetSection: 'rutas',
     image: '/images/29-rutas.jpg',
     imageAlt: 'Monitoreo satelital y flota de recolección en Puno',
-    accentColor: '#0081C0',
+    accentColor: '#2096d2',
     stats: [
       { label: 'Rutas Activas', value: '29' },
       { label: 'Cobertura', value: '100% Barrios' },
@@ -64,7 +64,7 @@ const HERO_SLIDES: SlideItem[] = [
     id: 'slide-segregacion',
     badge: 'Segregación Correcta',
     badgeIcon: Recycle,
-    badgeColor: 'bg-[#0081C0]/30 text-sky-100 border-sky-300/30',
+    badgeColor: 'bg-[#2096d2]/30 text-sky-100 border-sky-300/30',
     title: 'Separa tus residuos en',
     highlightText: '4 colores',
     subtitle: 'Aprende a clasificar tus residuos desde casa: orgánicos, aprovechables, no aprovechables y peligrosos. Una correcta segregación facilita el reciclaje y el compostaje en Puno.',
@@ -74,7 +74,7 @@ const HERO_SLIDES: SlideItem[] = [
     secondaryTargetSection: 'segregacion',
     image: '/images/segregacion-puno.jpg',
     imageAlt: 'Tachos de segregación de residuos en Puno: no aprovechables, orgánicos, aprovechables y peligrosos',
-    accentColor: '#0081C0',
+    accentColor: '#2096d2',
     stats: [
       { label: 'Tachos Oficiales', value: '4 Colores' },
       { label: 'Separa en Casa', value: '100%' },
@@ -116,7 +116,7 @@ const HERO_SLIDES: SlideItem[] = [
     secondaryTargetSection: 'segregacion',
     image: '/images/sumac-ayni.webp',
     imageAlt: 'Campañas de limpieza y voluntariado ambiental en Puno',
-    accentColor: '#0B335E',
+    accentColor: '#004173',
     stats: [
       { label: 'Jornadas 2026', value: 'Mensuales' },
       { label: 'Ecotrueques', value: 'Plantas x Botellas' },
@@ -137,7 +137,7 @@ const HERO_SLIDES: SlideItem[] = [
     secondaryTargetSection: 'reporta',
     image: '/images/reporte-al-vecino.jpg',
     imageAlt: 'Fiscalización ambiental y calles limpias en Puno',
-    accentColor: '#E5A91E',
+    accentColor: '#2096d2',
     stats: [
       { label: 'Respuesta Máx.', value: '24 hrs' },
       { label: 'Geolocalización', value: 'GPS Exacto' },
@@ -239,7 +239,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section 
       id="hero-section"
-      className="relative w-full min-h-[800px] sm:min-h-[860px] lg:min-h-[920px] bg-[#0B335E] text-white overflow-hidden select-none flex flex-col justify-between m-0 p-0"
+      className="relative w-full min-h-[800px] sm:min-h-[860px] lg:min-h-[920px] bg-[#004173] text-white overflow-hidden select-none flex flex-col justify-between m-0 p-0"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
@@ -265,6 +265,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="w-full h-full object-cover object-[center_60%]"
               loading={index === 0 ? 'eager' : 'lazy'}
             />
+
+            {/* Gradiente superior sutil — solo para legibilidad del navbar */}
+            <div className="absolute top-0 left-0 right-0 h-32 sm:h-40 pointer-events-none z-20 bg-gradient-to-b from-[#004173]/70 via-[#004173]/30 to-transparent"></div>
           </div>
         );
       })}
@@ -276,12 +279,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/15 text-white border border-white/25 backdrop-blur-md shadow-xs animate-fadeIn">
-            {React.createElement(activeSlide.badgeIcon, { className: "w-3.5 h-3.5 text-[#E5A91E]" })}
+            {React.createElement(activeSlide.badgeIcon, { className: "w-3.5 h-3.5 text-[#2096d2]" })}
             <span>{activeSlide.badge}</span>
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse ml-1"></span>
           </div>
 
-          {/* Main Headings (Sans-serif, font-extrabold) */}
+          {/* Main Headings */}
           <div className="space-y-1 sm:space-y-2">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.05] uppercase [text-shadow:_0_2px_12px_rgba(0,0,0,0.65)]">
               {activeSlide.title}{' '}
@@ -301,7 +304,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <button
               onClick={() => handleScrollTo(activeSlide.targetSection)}
               id={`hero-cta-primary-${activeSlide.id}`}
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm bg-[#0081C0] hover:bg-[#006699] text-white transition-all shadow-lg shadow-[#0081C0]/30 hover:shadow-xl hover:-translate-y-0.5 cursor-pointer"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm bg-[#2096d2] hover:bg-[#1a7fb3] text-white transition-all shadow-lg shadow-[#2096d2]/30 hover:shadow-xl hover:-translate-y-0.5 cursor-pointer"
             >
               <span>{activeSlide.ctaText}</span>
               <ArrowRight className="w-4 h-4 text-white" />
@@ -347,7 +350,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="absolute bottom-16 sm:bottom-20 lg:bottom-24 left-0 right-0 z-30">
         <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-20 flex flex-col items-start gap-3">
           
-          {/* Quick topic pills on larger screens (ARRIBA) */}
+          {/* Quick topic pills */}
           <div className="hidden md:flex items-center gap-1 bg-black/50 backdrop-blur-xl p-1 rounded-full border border-white/25 shadow-lg shadow-black/20">
             {HERO_SLIDES.map((slide, index) => {
               const isActive = index === currentSlide;
@@ -357,7 +360,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   onClick={() => goToSlide(index)}
                   className={`px-2.5 py-1 rounded-full text-[10px] font-semibold transition-all cursor-pointer whitespace-nowrap ${
                     isActive
-                      ? 'bg-[#0081C0] text-white shadow-md'
+                      ? 'bg-[#2096d2] text-white shadow-md'
                       : 'text-white/90 hover:text-white hover:bg-white/15 border border-white/20'
                   }`}
                 >
@@ -367,7 +370,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             })}
           </div>
 
-          {/* Dot Indicators + Play/Pause (ABAJO) */}
+          {/* Dot Indicators + Play/Pause */}
           <div className="flex items-center gap-2.5">
             {HERO_SLIDES.map((slide, index) => {
               const isActive = index === currentSlide;
@@ -378,7 +381,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   id={`hero-dot-${index}`}
                   className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                     isActive
-                      ? 'w-8 bg-[#0081C0] shadow-md ring-2 ring-white/30'
+                      ? 'w-8 bg-[#2096d2] shadow-md ring-2 ring-white/30'
                       : 'w-2.5 bg-white/40 hover:bg-white/70 ring-1 ring-white/20'
                   }`}
                   aria-label={`Ir a slide ${index + 1}: ${slide.title}`}
@@ -404,4 +407,3 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     </section>
   );
 };
-

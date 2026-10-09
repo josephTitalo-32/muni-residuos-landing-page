@@ -318,23 +318,23 @@ export const CitizenReportModule: React.FC = () => {
           <div className="lg:col-span-5">
             
             {/* Contenedor Principal del Wizard en Cian Muy Claro */}
-            <div className="bg-[#E8F8FA] rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-7 shadow-2xl border border-[#00B8D4]/30 text-[#0B335E] relative overflow-hidden backdrop-blur-xs">
+            <div className="bg-[#E8F8FA] rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-7 shadow-2xl border border-[#00B8D4]/30 text-[#004173] relative overflow-hidden backdrop-blur-xs">
               
               {/* Resplandor superior sutil */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#00B8D4] via-[#0B335E] to-[#00B8D4]" />
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#00B8D4] via-[#004173] to-[#00B8D4]" />
 
               {/* Wizard Steps Header (Progreso de 3 Pasos) */}
               <div className="mb-5 sm:mb-6">
                 <div className="flex items-center justify-between mb-2.5">
                   <div>
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#0081C0] block">
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#2096d2] block">
                       ASISTENTE DE REPORTE MUNICIPAL
                     </span>
-                    <h3 className="text-lg sm:text-xl font-extrabold text-[#0B335E]">
+                    <h3 className="text-lg sm:text-xl font-extrabold text-[#004173]">
                       {steps[currentStep - 1].title}
                     </h3>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-[#0B335E] text-[#00B8D4] border border-[#00B8D4]/30 shadow-xs">
+                  <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-[#004173] text-[#00B8D4] border border-[#00B8D4]/30 shadow-xs">
                     Paso {currentStep} de 3
                   </span>
                 </div>
@@ -363,7 +363,7 @@ export const CitizenReportModule: React.FC = () => {
                           isActive
                             ? 'bg-white border-[#00B8D4] shadow-md ring-2 ring-[#00B8D4]/20'
                             : isCompleted
-                            ? 'bg-white/80 border-cyan-300 hover:bg-white text-[#0B335E]'
+                            ? 'bg-white/80 border-cyan-300 hover:bg-white text-[#004173]'
                             : 'bg-white/40 border-cyan-200/60 opacity-60 hover:opacity-80'
                         }`}
                       >
@@ -373,14 +373,14 @@ export const CitizenReportModule: React.FC = () => {
                               isCompleted 
                                 ? 'bg-[#15803D] text-white' 
                                 : isActive 
-                                ? 'bg-[#0081C0] text-white' 
-                                : 'bg-cyan-200/80 text-[#0B335E]'
+                                ? 'bg-[#2096d2] text-white' 
+                                : 'bg-cyan-200/80 text-[#004173]'
                             }`}
                           >
                             {isCompleted ? <Check className="w-3 h-3 stroke-[3]" /> : st.number}
                           </div>
                           <div className="truncate">
-                            <p className="text-[11px] font-bold text-[#0B335E] truncate">
+                            <p className="text-[11px] font-bold text-[#004173] truncate">
                               {st.title}
                             </p>
                           </div>
@@ -416,7 +416,7 @@ export const CitizenReportModule: React.FC = () => {
                     
                     {/* Título de reporte (select) */}
                     <div className="space-y-1">
-                      <label htmlFor="select-tipo-infraccion" className="block text-[11px] font-bold uppercase tracking-wider text-[#0B335E]">
+                      <label htmlFor="select-tipo-infraccion" className="block text-[11px] font-bold uppercase tracking-wider text-[#004173]">
                         Tipo de Infracción o Problema *
                       </label>
                       <select
@@ -426,7 +426,7 @@ export const CitizenReportModule: React.FC = () => {
                           setCategory(e.target.value as CitizenReport['category']);
                           setValidationError(null);
                         }}
-                        className="w-full px-3 py-2.5 rounded-xl border border-cyan-300 text-xs sm:text-sm text-[#0B335E] bg-white font-medium focus:ring-2 focus:ring-[#00B8D4] focus:border-[#00B8D4] focus:outline-hidden transition-all shadow-xs"
+                        className="w-full px-3 py-2.5 rounded-xl border border-cyan-300 text-xs sm:text-sm text-[#004173] bg-white font-medium focus:ring-2 focus:ring-[#00B8D4] focus:border-[#00B8D4] focus:outline-hidden transition-all shadow-xs"
                       >
                         <option value="Basura en Esquina">Basura arrojada en esquina fuera de horario</option>
                         <option value="Desmonte Clandestino">Desmonte / Escombros de construcción en vía pública</option>
@@ -438,7 +438,7 @@ export const CitizenReportModule: React.FC = () => {
 
                     {/* Barrio o Sector */}
                     <div className="space-y-1">
-                      <label htmlFor="input-barrio" className="block text-[11px] font-bold uppercase tracking-wider text-[#0B335E]">
+                      <label htmlFor="input-barrio" className="block text-[11px] font-bold uppercase tracking-wider text-[#004173]">
                         Barrio o Sector en Puno *
                       </label>
                       <input
@@ -451,14 +451,14 @@ export const CitizenReportModule: React.FC = () => {
                           setValidationError(null);
                         }}
                         placeholder="Ej. Laykakota, Bellavista, Huáscar, Centro Histórico"
-                        className="w-full px-3 py-2.5 rounded-xl border border-cyan-300 text-xs sm:text-sm text-[#0B335E] bg-white font-medium placeholder:text-slate-400 focus:ring-2 focus:ring-[#00B8D4] focus:border-[#00B8D4] focus:outline-hidden transition-all shadow-xs"
+                        className="w-full px-3 py-2.5 rounded-xl border border-cyan-300 text-xs sm:text-sm text-[#004173] bg-white font-medium placeholder:text-slate-400 focus:ring-2 focus:ring-[#00B8D4] focus:border-[#00B8D4] focus:outline-hidden transition-all shadow-xs"
                       />
                     </div>
 
                     {/* Dirección o Referencia con botón GPS */}
                     <div className="space-y-1">
                       <div className="flex items-center justify-between">
-                        <label htmlFor="input-direccion" className="block text-[11px] font-bold uppercase tracking-wider text-[#0B335E]">
+                        <label htmlFor="input-direccion" className="block text-[11px] font-bold uppercase tracking-wider text-[#004173]">
                           Dirección o Referencia *
                         </label>
                         <button
@@ -468,11 +468,11 @@ export const CitizenReportModule: React.FC = () => {
                           className={`text-[10px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 transition-all cursor-pointer ${
                             isGpsActive 
                               ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' 
-                              : 'bg-[#00B8D4]/20 text-[#0B335E] hover:bg-[#00B8D4]/30 border border-[#00B8D4]/40'
+                              : 'bg-[#00B8D4]/20 text-[#004173] hover:bg-[#00B8D4]/30 border border-[#00B8D4]/40'
                           }`}
                           title="Sincronizar con el GPS"
                         >
-                          <Navigation className={`w-3 h-3 text-[#0081C0] ${gpsLoading ? 'animate-spin' : ''}`} />
+                          <Navigation className={`w-3 h-3 text-[#2096d2] ${gpsLoading ? 'animate-spin' : ''}`} />
                           <span>{gpsLoading ? 'Detectando...' : isGpsActive ? 'GPS Activo' : 'Sincronizar GPS'}</span>
                         </button>
                       </div>
@@ -486,13 +486,13 @@ export const CitizenReportModule: React.FC = () => {
                           setValidationError(null);
                         }}
                         placeholder="Ej. Jr. Independencia con Tarapacá o haz clic en el mapa"
-                        className="w-full px-3 py-2.5 rounded-xl border border-cyan-300 text-xs sm:text-sm text-[#0B335E] bg-white font-medium placeholder:text-slate-400 focus:ring-2 focus:ring-[#00B8D4] focus:border-[#00B8D4] focus:outline-hidden transition-all shadow-xs"
+                        className="w-full px-3 py-2.5 rounded-xl border border-cyan-300 text-xs sm:text-sm text-[#004173] bg-white font-medium placeholder:text-slate-400 focus:ring-2 focus:ring-[#00B8D4] focus:border-[#00B8D4] focus:outline-hidden transition-all shadow-xs"
                       />
                     </div>
 
                     {/* Conexión directa con el mapa interactivo */}
-                    <div className="p-2.5 bg-white/80 rounded-xl border border-cyan-200/90 text-xs text-[#0B335E] flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-[#0081C0] shrink-0" />
+                    <div className="p-2.5 bg-white/80 rounded-xl border border-cyan-200/90 text-xs text-[#004173] flex items-center gap-2">
+                      <MapPin className="w-4 h-4 text-[#2096d2] shrink-0" />
                       <span className="text-[11px] leading-tight">
                         <strong>Coordenadas fijadas en el mapa:</strong> [{selectedCoords[0].toFixed(4)}, {selectedCoords[1].toFixed(4)}]. Puedes mover el marcador a la izquierda.
                       </span>
@@ -507,7 +507,7 @@ export const CitizenReportModule: React.FC = () => {
                     
                     {/* Descripción detallada (textarea) */}
                     <div className="space-y-1">
-                      <label htmlFor="textarea-descripcion" className="block text-[11px] font-bold uppercase tracking-wider text-[#0B335E]">
+                      <label htmlFor="textarea-descripcion" className="block text-[11px] font-bold uppercase tracking-wider text-[#004173]">
                         Descripción Detallada del Hecho *
                       </label>
                       <textarea
@@ -520,14 +520,14 @@ export const CitizenReportModule: React.FC = () => {
                           setValidationError(null);
                         }}
                         placeholder="Indica la recurrencia, horario aproximado, cantidad de basura o datos de vehículos/infractores..."
-                        className="w-full px-3 py-2.5 rounded-xl border border-cyan-300 text-xs sm:text-sm text-[#0B335E] bg-white font-medium placeholder:text-slate-400 focus:ring-2 focus:ring-[#00B8D4] focus:border-[#00B8D4] focus:outline-hidden transition-all shadow-xs resize-none"
+                        className="w-full px-3 py-2.5 rounded-xl border border-cyan-300 text-xs sm:text-sm text-[#004173] bg-white font-medium placeholder:text-slate-400 focus:ring-2 focus:ring-[#00B8D4] focus:border-[#00B8D4] focus:outline-hidden transition-all shadow-xs resize-none"
                       />
                     </div>
 
                     {/* Fotografías (botones de Cámara y Galería con preview) */}
                     <div className="space-y-2">
                       <div className="flex items-center justify-between">
-                        <label className="block text-[11px] font-bold uppercase tracking-wider text-[#0B335E]">
+                        <label className="block text-[11px] font-bold uppercase tracking-wider text-[#004173]">
                           Evidencia Fotográfica (Recomendado)
                         </label>
                         <span className="text-[10px] text-slate-500 font-medium">JPG, PNG, WEBP</span>
@@ -547,16 +547,16 @@ export const CitizenReportModule: React.FC = () => {
                         <button
                           type="button"
                           onClick={triggerFileInput}
-                          className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-cyan-300 bg-white hover:bg-cyan-50/50 text-xs font-bold text-[#0B335E] transition-all shadow-xs cursor-pointer group"
+                          className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-cyan-300 bg-white hover:bg-cyan-50/50 text-xs font-bold text-[#004173] transition-all shadow-xs cursor-pointer group"
                         >
-                          <Camera className="w-3.5 h-3.5 text-[#0081C0] group-hover:scale-110 transition-transform" />
+                          <Camera className="w-3.5 h-3.5 text-[#2096d2] group-hover:scale-110 transition-transform" />
                           <span>Tomar Foto</span>
                         </button>
 
                         <button
                           type="button"
                           onClick={triggerFileInput}
-                          className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-cyan-300 bg-white hover:bg-cyan-50/50 text-xs font-bold text-[#0B335E] transition-all shadow-xs cursor-pointer group"
+                          className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-cyan-300 bg-white hover:bg-cyan-50/50 text-xs font-bold text-[#004173] transition-all shadow-xs cursor-pointer group"
                         >
                           <ImageIcon className="w-3.5 h-3.5 text-[#15803D] group-hover:scale-110 transition-transform" />
                           <span>Galería</span>
@@ -573,7 +573,7 @@ export const CitizenReportModule: React.FC = () => {
                               className="w-14 h-14 object-cover rounded-xl border border-slate-200" 
                             />
                             <div className="text-xs">
-                              <p className="font-bold text-[#0B335E] flex items-center gap-1">
+                              <p className="font-bold text-[#004173] flex items-center gap-1">
                                 <CheckCircle2 className="w-3.5 h-3.5 text-[#15803D]" />
                                 Evidencia cargada
                               </p>
@@ -596,8 +596,8 @@ export const CitizenReportModule: React.FC = () => {
                           className="mt-1 p-3.5 rounded-xl border-2 border-dashed border-cyan-300/80 bg-white/60 text-center cursor-pointer hover:bg-white transition-all group"
                         >
                           <div className="flex flex-col items-center gap-1">
-                            <Camera className="w-5 h-5 text-[#0081C0] group-hover:scale-110 transition-transform" />
-                            <span className="text-xs font-bold text-[#0B335E]">
+                            <Camera className="w-5 h-5 text-[#2096d2] group-hover:scale-110 transition-transform" />
+                            <span className="text-xs font-bold text-[#004173]">
                               Haz clic para tomar o subir fotografía
                             </span>
                             <span className="text-[10px] text-slate-500">
@@ -617,7 +617,7 @@ export const CitizenReportModule: React.FC = () => {
                     
                     {/* Celular de contacto */}
                     <div className="space-y-1">
-                      <label htmlFor="input-celular" className="block text-[11px] font-bold uppercase tracking-wider text-[#0B335E]">
+                      <label htmlFor="input-celular" className="block text-[11px] font-bold uppercase tracking-wider text-[#004173]">
                         Celular del Ciudadano Denunciante *
                       </label>
                       <div className="relative">
@@ -632,7 +632,7 @@ export const CitizenReportModule: React.FC = () => {
                             setValidationError(null);
                           }}
                           placeholder="Ej. 951 234 567"
-                          className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-cyan-300 text-xs sm:text-sm text-[#0B335E] bg-white font-medium placeholder:text-slate-400 focus:ring-2 focus:ring-[#00B8D4] focus:border-[#00B8D4] focus:outline-hidden transition-all shadow-xs"
+                          className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-cyan-300 text-xs sm:text-sm text-[#004173] bg-white font-medium placeholder:text-slate-400 focus:ring-2 focus:ring-[#00B8D4] focus:border-[#00B8D4] focus:outline-hidden transition-all shadow-xs"
                         />
                       </div>
                       <p className="text-[10px] text-slate-500">
@@ -642,23 +642,23 @@ export const CitizenReportModule: React.FC = () => {
 
                     {/* Resumen Final de Comprobación */}
                     <div className="bg-white rounded-2xl p-3.5 border border-cyan-200 shadow-xs space-y-2">
-                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#0B335E]">
-                        <Sparkles className="w-3.5 h-3.5 text-[#0081C0]" />
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#004173]">
+                        <Sparkles className="w-3.5 h-3.5 text-[#2096d2]" />
                         <span>Resumen del Reporte</span>
                       </div>
                       
                       <div className="grid grid-cols-2 gap-2 text-[11px] pt-1 border-t border-slate-100">
                         <div className="p-1.5 rounded-lg bg-cyan-50/60">
                           <span className="text-[9px] font-bold text-slate-500 uppercase block">Infracción</span>
-                          <span className="font-bold text-[#0B335E] truncate block">{category}</span>
+                          <span className="font-bold text-[#004173] truncate block">{category}</span>
                         </div>
                         <div className="p-1.5 rounded-lg bg-cyan-50/60">
                           <span className="text-[9px] font-bold text-slate-500 uppercase block">Barrio</span>
-                          <span className="font-bold text-[#0B335E] truncate block">{neighborhood}</span>
+                          <span className="font-bold text-[#004173] truncate block">{neighborhood}</span>
                         </div>
                         <div className="p-1.5 rounded-lg bg-cyan-50/60 col-span-2">
                           <span className="text-[9px] font-bold text-slate-500 uppercase block">Ubicación fijada</span>
-                          <span className="font-semibold text-[#0B335E] truncate block text-[11px]">{address}</span>
+                          <span className="font-semibold text-[#004173] truncate block text-[11px]">{address}</span>
                         </div>
                         <div className="p-1.5 rounded-lg bg-cyan-50/60 col-span-2 flex items-center justify-between text-[11px]">
                           <span className="text-slate-600 font-medium">Evidencia fotográfica:</span>
@@ -671,7 +671,7 @@ export const CitizenReportModule: React.FC = () => {
 
                     {/* Declaración de veracidad */}
                     <div className="p-2.5 bg-white/70 rounded-xl border border-cyan-200/80 text-[10px] text-slate-600 flex items-start gap-2">
-                      <Scale className="w-3.5 h-3.5 text-[#0081C0] shrink-0 mt-0.5" />
+                      <Scale className="w-3.5 h-3.5 text-[#2096d2] shrink-0 mt-0.5" />
                       <span>
                         Declaro que los datos brindados corresponden a hechos reales observados en Puno, amparado en la Ordenanza N° 092-2023-MPP.
                       </span>
@@ -688,9 +688,9 @@ export const CitizenReportModule: React.FC = () => {
                     <button
                       type="button"
                       onClick={handlePrevStep}
-                      className="px-3.5 py-2.5 rounded-xl border border-cyan-300 bg-white hover:bg-slate-50 text-xs font-bold text-[#0B335E] flex items-center gap-1.5 transition-all shadow-xs cursor-pointer"
+                      className="px-3.5 py-2.5 rounded-xl border border-cyan-300 bg-white hover:bg-slate-50 text-xs font-bold text-[#004173] flex items-center gap-1.5 transition-all shadow-xs cursor-pointer"
                     >
-                      <ChevronLeft className="w-3.5 h-3.5 text-[#0B335E]" />
+                      <ChevronLeft className="w-3.5 h-3.5 text-[#004173]" />
                       <span>Atrás</span>
                     </button>
                   ) : (
@@ -704,7 +704,7 @@ export const CitizenReportModule: React.FC = () => {
                     <button
                       type="button"
                       onClick={handleNextStep}
-                      className="px-5 py-2.5 rounded-xl bg-[#0081C0] hover:bg-[#006699] text-white text-xs font-bold flex items-center gap-1.5 transition-all shadow-md shadow-[#0081C0]/25 hover:shadow-lg hover:shadow-[#0081C0]/35 cursor-pointer"
+                      className="px-5 py-2.5 rounded-xl bg-[#2096d2] hover:bg-[#1a7fb3] text-white text-xs font-bold flex items-center gap-1.5 transition-all shadow-md shadow-[#2096d2]/25 hover:shadow-lg hover:shadow-[#2096d2]/35 cursor-pointer"
                     >
                       <span>Siguiente</span>
                       <ChevronRight className="w-3.5 h-3.5" />
@@ -714,7 +714,7 @@ export const CitizenReportModule: React.FC = () => {
                       type="submit"
                       disabled={isSubmitting}
                       id="btn-enviar-reporte"
-                      className="px-5 py-2.5 rounded-xl bg-[#0081C0] hover:bg-[#006699] text-white text-xs font-bold flex items-center gap-1.5 transition-all shadow-md shadow-[#0081C0]/30 hover:shadow-lg hover:shadow-[#0081C0]/40 disabled:opacity-50 cursor-pointer"
+                      className="px-5 py-2.5 rounded-xl bg-[#2096d2] hover:bg-[#1a7fb3] text-white text-xs font-bold flex items-center gap-1.5 transition-all shadow-md shadow-[#2096d2]/30 hover:shadow-lg hover:shadow-[#2096d2]/40 disabled:opacity-50 cursor-pointer"
                     >
                       <Send className="w-3.5 h-3.5 text-white" />
                       <span>{isSubmitting ? 'Registrando...' : 'Generar Ticket'}</span>
@@ -741,17 +741,17 @@ export const CitizenReportModule: React.FC = () => {
       {/* Success Modal with Generated Ticket */}
       {submittedTicket && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-[#E8F8FA] rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl border border-[#00B8D4]/40 text-center space-y-4 text-[#0B335E]">
+          <div className="bg-[#E8F8FA] rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl border border-[#00B8D4]/40 text-center space-y-4 text-[#004173]">
             
-            <div className="w-14 h-14 rounded-2xl bg-[#00B8D4]/20 text-[#0081C0] flex items-center justify-center mx-auto shadow-xs border border-[#00B8D4]/30">
+            <div className="w-14 h-14 rounded-2xl bg-[#00B8D4]/20 text-[#2096d2] flex items-center justify-center mx-auto shadow-xs border border-[#00B8D4]/30">
               <CheckCircle2 className="w-8 h-8" />
             </div>
 
             <div className="space-y-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#0081C0]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#2096d2]">
                 ¡Reporte Registrado con Éxito!
               </span>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#0B335E]">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#004173]">
                 Ticket #{submittedTicket}
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -762,7 +762,7 @@ export const CitizenReportModule: React.FC = () => {
             <div className="p-3.5 rounded-2xl bg-white border border-cyan-200 text-xs text-left space-y-1.5 shadow-xs">
               <div className="flex justify-between items-center">
                 <span className="text-slate-500">Categoría:</span>
-                <span className="font-bold text-[#0B335E]">{category}</span>
+                <span className="font-bold text-[#004173]">{category}</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-slate-500">Lugar fijado:</span>
@@ -782,7 +782,7 @@ export const CitizenReportModule: React.FC = () => {
 
             <button
               onClick={() => setSubmittedTicket(null)}
-              className="w-full py-3 rounded-xl font-bold text-xs sm:text-sm bg-[#0081C0] hover:bg-[#006699] text-white transition-all shadow-md shadow-[#0081C0]/30 cursor-pointer"
+              className="w-full py-3 rounded-xl font-bold text-xs sm:text-sm bg-[#2096d2] hover:bg-[#1a7fb3] text-white transition-all shadow-md shadow-[#2096d2]/30 cursor-pointer"
             >
               Entendido / Cerrar Ventana
             </button>

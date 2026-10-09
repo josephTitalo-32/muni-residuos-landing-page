@@ -15,12 +15,12 @@ export const FaqSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#0081C0]/15 text-[#0B335E] border border-[#0081C0]/30 uppercase tracking-wider">
-            <HelpCircle className="w-3.5 h-3.5 text-[#0081C0]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#2096d2]/15 text-[#004173] border border-[#2096d2]/30 uppercase tracking-wider">
+            <HelpCircle className="w-3.5 h-3.5 text-[#2096d2]" />
             <span>Orientación Vecinal y Normativa</span>
           </div>
           
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0B335E] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#004173] tracking-tight">
             Preguntas Frecuentes sobre la Limpieza en Puno
           </h2>
           
@@ -49,7 +49,7 @@ export const FaqSection: React.FC = () => {
                   </h3>
                   
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                    isOpen ? 'bg-[#0081C0] text-white rotate-180' : 'bg-slate-100 text-slate-500'
+                    isOpen ? 'bg-[#2096d2] text-white rotate-180' : 'bg-slate-100 text-slate-500'
                   }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
@@ -70,7 +70,7 @@ export const FaqSection: React.FC = () => {
         {/* Contact Assistance */}
         <div className="text-center pt-1">
           <p className="text-xs text-slate-500">
-            ¿Tiene alguna consulta adicional? Comuníquese con la central de atención GGIRS: <strong className="text-[#0B335E]">(051) 368-450</strong>
+            ¿Tiene alguna consulta adicional? Comuníquese con la central de atención GGIRS: <strong className="text-[#004173]">(051) 368-450</strong>
           </p>
         </div>
 

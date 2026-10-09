@@ -125,7 +125,7 @@ export const RouteMap: React.FC<RouteMapProps> = ({
 
     // A. Outer casing
     const casing = L.polyline(pts, {
-      color: isUnderConstruction ? '#475569' : '#006699',
+      color: isUnderConstruction ? '#475569' : '#1a7fb3',
       weight: isUnderConstruction ? 5 : 8,
       opacity: isUnderConstruction ? 0.2 : 0.35,
       lineCap: 'round', lineJoin: 'round',
@@ -135,7 +135,7 @@ export const RouteMap: React.FC<RouteMapProps> = ({
 
     // B. Main polyline
     const mainPoly = L.polyline(pts, {
-      color: isUnderConstruction ? '#64748B' : '#0081C0',
+      color: isUnderConstruction ? '#64748B' : '#2096d2',
       weight: isUnderConstruction ? 4 : 5,
       opacity: 0.95, lineCap: 'round', lineJoin: 'round',
       dashArray: isUnderConstruction ? '6, 8' : undefined,
@@ -147,10 +147,10 @@ export const RouteMap: React.FC<RouteMapProps> = ({
       for (let i = 0; i < pts.length - 1; i++) {
         const p1 = pts[i]; const p2 = pts[i + 1];
         const streetName = streets[i % streets.length] || routeName;
-        const seg = L.polyline([p1, p2], { color: '#0081C0', weight: 14, opacity: 0.01, interactive: true });
+        const seg = L.polyline([p1, p2], { color: '#2096d2', weight: 14, opacity: 0.01, interactive: true });
         seg.bindTooltip(`📍 ${streetName}`, { sticky: true, className: 'puno-street-tooltip', direction: 'top', offset: [0, -6] });
-        seg.on('mouseover', () => seg.setStyle({ opacity: 0.85, color: '#E5A91E', weight: 8 }));
-        seg.on('mouseout', () => seg.setStyle({ opacity: 0.01, color: '#0081C0', weight: 14 }));
+        seg.on('mouseover', () => seg.setStyle({ opacity: 0.85, color: '#2096d2', weight: 8 }));
+        seg.on('mouseout', () => seg.setStyle({ opacity: 0.01, color: '#2096d2', weight: 14 }));
         seg.addTo(layerGroup);
       }
     }
@@ -180,7 +180,7 @@ export const RouteMap: React.FC<RouteMapProps> = ({
     // F. Truck
     const truckIcon = L.divIcon({
       className: 'custom-truck-div-icon',
-      html: `<div class="truck-marker-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="#0081C0" stroke-width="1.5" style="width:38px;height:38px;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.45));"><rect x="2" y="8" width="18" height="10" rx="1" fill="white" stroke="#0081C0" /><circle cx="6" cy="18" r="2" fill="#0B335E" /><circle cx="16" cy="18" r="2" fill="#0B335E" /><polygon points="20,8 24,8 24,14 20,14" fill="#E5A91E" stroke="#0081C0" /><rect x="8" y="10" width="6" height="4" rx="1" fill="#0081C0" /></svg></div>`,
+      html: `<div class="truck-marker-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="#2096d2" stroke-width="1.5" style="width:38px;height:38px;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.45));"><rect x="2" y="8" width="18" height="10" rx="1" fill="white" stroke="#2096d2" /><circle cx="6" cy="18" r="2" fill="#004173" /><circle cx="16" cy="18" r="2" fill="#004173" /><polygon points="20,8 24,8 24,14 20,14" fill="#2096d2" stroke="#2096d2" /><rect x="8" y="10" width="6" height="4" rx="1" fill="#2096d2" /></svg></div>`,
       iconSize: [42, 42], iconAnchor: [21, 21],
     });
     const truckMarker = L.marker(startCoord, { icon: truckIcon, zIndexOffset: 1200 });
@@ -232,13 +232,13 @@ export const RouteMap: React.FC<RouteMapProps> = ({
       <div ref={mapContainerRef} className="absolute inset-0 w-full h-full z-0" />
 
       <div className="absolute top-3 right-3 z-[400] flex flex-col rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white pointer-events-auto">
-        <button onClick={() => mapInstanceRef.current?.zoomIn()} title="Acercar" aria-label="Acercar mapa" className="w-9 h-9 flex items-center justify-center text-[#0B335E] hover:bg-slate-50 transition-colors cursor-pointer border-b border-slate-200">
+        <button onClick={() => mapInstanceRef.current?.zoomIn()} title="Acercar" aria-label="Acercar mapa" className="w-9 h-9 flex items-center justify-center text-[#004173] hover:bg-slate-50 transition-colors cursor-pointer border-b border-slate-200">
           <Plus className="w-4 h-4" />
         </button>
-        <button onClick={() => mapInstanceRef.current?.zoomOut()} title="Alejar" aria-label="Alejar mapa" className="w-9 h-9 flex items-center justify-center text-[#0B335E] hover:bg-slate-50 transition-colors cursor-pointer border-b border-slate-200">
+        <button onClick={() => mapInstanceRef.current?.zoomOut()} title="Alejar" aria-label="Alejar mapa" className="w-9 h-9 flex items-center justify-center text-[#004173] hover:bg-slate-50 transition-colors cursor-pointer border-b border-slate-200">
           <Minus className="w-4 h-4" />
         </button>
-        <button onClick={handleCenter} id="btn-centrar-ruta" title="Centrar ruta" aria-label="Centrar ruta en pantalla" className="w-9 h-9 flex items-center justify-center text-[#0B335E] hover:bg-slate-50 hover:text-[#0081C0] transition-colors cursor-pointer">
+        <button onClick={handleCenter} id="btn-centrar-ruta" title="Centrar ruta" aria-label="Centrar ruta en pantalla" className="w-9 h-9 flex items-center justify-center text-[#004173] hover:bg-slate-50 hover:text-[#2096d2] transition-colors cursor-pointer">
           <Maximize2 className="w-4 h-4" />
         </button>
       </div>
