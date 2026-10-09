@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   ArrowRight, 
   Calendar,
@@ -6,11 +6,8 @@ import {
 } from 'lucide-react';
 import { NEWS_DATA } from '../data/newsData';
 import type { MunicipalNewsItem } from '../types';
-import { NoticiaDetalleModal } from './NoticiaDetalleModal';
 
 export const NewsSection: React.FC = () => {
-  const [activeNewsId, setActiveNewsId] = useState<string | null>(null);
-
   // Tomamos las primeras 3 noticias como destacadas
   const featuredNews = NEWS_DATA.slice(0, 3);
 
@@ -33,7 +30,7 @@ export const NewsSection: React.FC = () => {
     <div className="space-y-8 font-body relative">
       
       {/* SUBTÍTULO INTERNO */}
-      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 border-b border-slate-200 pb-5">
+      <div className="border-b border-slate-200 pb-5">
         <div className="space-y-1.5">
           <div className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-[#0081C0] font-heading">
             <span className="w-6 h-0.5 bg-[#0081C0] rounded-full"></span>
@@ -46,23 +43,15 @@ export const NewsSection: React.FC = () => {
             Mantente informado sobre las intervenciones, campañas y logros de la gestión ambiental municipal.
           </p>
         </div>
-        
-        <button
-          type="button"
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs bg-[#0B335E] hover:bg-[#0081C0] text-white transition-all shadow-sm cursor-pointer shrink-0 font-heading self-start sm:self-auto"
-        >
-          <span>Ver todas</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </button>
       </div>
 
       {/* GRILLA DE 3 NOTICIAS DESTACADAS */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
         {featuredNews.map((news, idx) => (
-          <article
+          <a
             key={news.id}
-            onClick={() => setActiveNewsId(news.id)}
-            className="group bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-[0_16px_40px_rgba(0,129,192,0.12)] hover:-translate-y-1.5 hover:border-[#0081C0]/40 transition-all duration-300 cursor-pointer flex flex-col"
+            href={`/noticias/${news.id}`}
+            className="group bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-[0_16px_40px_rgba(0,129,192,0.12)] hover:-translate-y-1.5 hover:border-[#0081C0]/40 active:scale-[0.98] active:shadow-inner transition-all duration-300 cursor-pointer flex flex-col"
           >
             {/* Imagen de portada */}
             <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
@@ -110,16 +99,10 @@ export const NewsSection: React.FC = () => {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
               </div>
             </div>
-          </article>
+          </a>
         ))}
       </div>
 
-      {/* Modal de detalle de noticia */}
-      <NoticiaDetalleModal
-        newsId={activeNewsId}
-        onClose={() => setActiveNewsId(null)}
-        onNavigateToNews={(newId) => setActiveNewsId(newId)}
-      />
     </div>
   );
 };

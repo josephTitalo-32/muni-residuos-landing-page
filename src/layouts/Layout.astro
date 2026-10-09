@@ -42,6 +42,119 @@ const {
   </head>
 
   <body class="bg-[#F8FAFC] text-[#0F172A] font-sans antialiased selection:bg-[#0081C0] selection:text-white">
+    <!-- Custom scrollbar overlay -->
+    <div id="custom-scrollbar-track" class="custom-scrollbar-track">
+      <div id="custom-scrollbar-thumb" class="custom-scrollbar-thumb"></div>
+    </div>
+
     <slot />
+
+    <script>
+      // ============================================
+      // CUSTOM SCROLLBAR OVERLAY
+      // ============================================
+      (function () {
+        var track = document.getElementById('custom-scrollbar-track');
+        var thumb = document.getElementById('custom-scrollbar-thumb');
+        if (!track || !thumb) return;
+
+        var hideTimeout = null;
+        var isDragging = false;
+
+        function updateThumb() {
+          var scrollTop = window.scrollY || document.documentElement.scrollTop;
+          var scrollHeight = document.documentElement.scrollHeight;
+          var clientHeight = window.innerHeight;
+          var scrollableHeight = scrollHeight - clientHeight;
+
+          // Si no hay scroll posible, oculta el scrollbar
+          if (scrollableHeight <= 0) {
+            track.classList.remove('visible');
+            return;
+          }
+
+          // Calcular altura del thumb proporcional
+          var thumbHeight = Math.max(
+            40,
+            (clientHeight / scrollHeight) * clientHeight
+          );
+
+          // Calcular posición del thumb
+          var thumbTop =
+            (scrollTop / scrollableHeight) * (clientHeight - thumbHeight);
+
+          thumb.style.height = thumbHeight + 'px';
+          thumb.style.top = thumbTop + 'px';
+        }
+
+        function showScrollbar() {
+          track.classList.add('visible');
+
+          if (hideTimeout) {
+            clearTimeout(hideTimeout);
+          }
+
+          hideTimeout = window.setTimeout(function () {
+            if (!isDragging) {
+              track.classList.remove('visible');
+            }
+          }, 1200);
+        }
+
+        // Escuchar scroll para mostrar y actualizar
+        window.addEventListener('scroll', function () {
+          updateThumb();
+          showScrollbar();
+        }, { passive: true });
+
+        window.addEventListener('resize', updateThumb, { passive: true });
+
+        // Mostrar también al mover el mouse por la zona derecha
+        document.addEventListener('mousemove', function (e) {
+          if (window.innerWidth - e.clientX < 30) {
+            showScrollbar();
+          }
+        });
+
+        // Drag del thumb
+        thumb.addEventListener('mousedown', function (e) {
+          e.preventDefault();
+          isDragging = true;
+          thumb.classList.add('dragging');
+          document.body.style.userSelect = 'none';
+
+          var startY = e.clientY;
+          var startScrollTop = window.scrollY;
+
+          function onMouseMove(moveEvent) {
+            var deltaY = moveEvent.clientY - startY;
+            var scrollHeight = document.documentElement.scrollHeight;
+            var clientHeight = window.innerHeight;
+            var scrollableHeight = scrollHeight - clientHeight;
+            var trackHeight = clientHeight;
+
+            var thumbHeight = Math.max(40, (clientHeight / scrollHeight) * clientHeight);
+            var draggableHeight = trackHeight - thumbHeight;
+
+            var scrollDelta = (deltaY / draggableHeight) * scrollableHeight;
+            window.scrollTo(0, startScrollTop + scrollDelta);
+          }
+
+          function onMouseUp() {
+            isDragging = false;
+            thumb.classList.remove('dragging');
+            document.body.style.userSelect = '';
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+          }
+
+          document.addEventListener('mousemove', onMouseMove);
+          document.addEventListener('mouseup', onMouseUp);
+        });
+
+        // Inicializar
+        updateThumb();
+      })();
+    </script>
   </body>
 </html>

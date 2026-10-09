@@ -45,21 +45,6 @@
     }
 }
 
-/* Custom subtle scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #F1F5F9;
-}
-::-webkit-scrollbar-thumb {
-    background: #CBD5E1;
-    border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #94A3B8;
-}
 
 /* Custom Leaflet Tooltips and Marker Styles */
 .leaflet-tooltip.puno-street-tooltip {
@@ -173,3 +158,93 @@
 .animate-stagger-4 { animation-delay: 0.35s; }
 .animate-stagger-5 { animation-delay: 0.45s; }
 .animate-stagger-6 { animation-delay: 0.55s; }
+
+/* ============================================ */
+/* POP-IN ANIMATION PARA PÁGINAS DE NOTICIA    */
+/* ============================================ */
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.80) translateY(60px);
+    filter: blur(8px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-pop-in {
+  animation: popIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/*
+@media (prefers-reduced-motion: reduce) {
+  .animate-pop-in {
+    animation: none;
+  }
+}
+*/
+
+/* ============================================ */
+/* CUSTOM SCROLLBAR OVERLAY (tipo macOS)        */
+/* ============================================ */
+
+/* Ocultar scrollbar nativo pero mantener funcionalidad */
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge legacy */
+}
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Track invisible (aparece solo cuando el mouse entra a la zona) */
+.custom-scrollbar-track {
+  position: fixed;
+  top: 0;
+  right: 2px;
+  width: 10px;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.custom-scrollbar-track.visible {
+  opacity: 1;
+}
+
+/* Thumb neutral gris (independiente de la paleta institucional) */
+.custom-scrollbar-thumb {
+  position: absolute;
+  right: 2px;
+  width: 6px;
+  min-height: 40px;
+  background-color: rgba(71, 85, 105, 0.45);
+  border-radius: 6px;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: background-color 0.2s ease, width 0.15s ease;
+}
+
+.custom-scrollbar-thumb:hover,
+.custom-scrollbar-thumb.dragging {
+  background-color: rgba(51, 65, 85, 0.75);
+  width: 8px;
+}
+
+@media (max-width: 768px) {
+  .custom-scrollbar-track {
+    display: none;
+  }
+}

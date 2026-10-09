@@ -16,36 +16,20 @@ import { Footer } from '../components/Footer';
 <Layout>
   <div class="min-h-screen bg-[#F8FAFC] text-[#0F172A] flex flex-col selection:bg-[#0081C0] selection:text-white">
 
-    {/* 1. Header — usa window en useEffect, necesita client:only */}
-    <Header client:only="react" />
+    <Header client:load />
 
-    {/* 2. Hero Section — usa window, document y timers */}
-    <HeroSection client:only="react" />
+    <HeroSection client:load />
 
     <main class="flex-1 bg-transparent">
-      {/* 1. Rutas — importa RouteMap (Leaflet) */}
-      <RoutesModule client:only="react" />
-
-      {/* 2. Segregación — puramente estático */}
+      <RoutesModule client:load />
       <SegregationModule client:visible />
-
-      {/* 3. Compostaje — tiene form con useState, pero no toca window directamente */}
       <CompostModule client:visible />
-
-      {/* 4. Sumac Ayni — tiene modal pero no toca window directamente */}
       <SumacAyniModule client:visible />
-
-      {/* 5. Actualidad — importa NewsSection (window.location) + EnvironmentalImpactGallery (window, document) */}
-      <ActualidadSection client:only="react" />
-
-      {/* 6. Reporta a tu Vecino — importa CitizenReportMap (Leaflet) + navigator.geolocation */}
-      <CitizenReportModule client:only="react" />
-
-      {/* 7. FAQ — puramente estático con acordeón simple */}
+      <ActualidadSection client:load />
+      <CitizenReportModule client:load />
       <FaqSection client:visible />
     </main>
 
-    {/* Footer — estático */}
     <Footer />
 
   </div>
